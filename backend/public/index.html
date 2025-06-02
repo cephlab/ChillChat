@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/room.css" />
+    <script src="/socket.io/socket.io.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHqT9GWp1SP6R7NGeKc3UiaP7JYxA3kRJWzC6chs22+WHGn2rp14D38XB1ZZxWJz+5fH0KQw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Section d'authentification -->
+    <!-- Section d'authentification -->
+    <div id="auth-container">
+      <button id="go-to-login-btn">Se connecter</button>
+      <button id="logout-account-btn" style="display: none">
+        Déconnecter l'email
+      </button>
+    </div>
+    <!-- Écran de connexion pour rejoindre une room -->
+    <div id="login-container">
+      <h2>Rejoindre une Room</h2>
+      <input id="username" placeholder="Nom d'utilisateur" />
+      <input id="room" placeholder="Nom de la room" />
+      <button id="joinBtn">Rejoindre</button>
+    </div>
+    <!-- Interface de chat -->
+    <div id="chat-container">
+      <header>
+        <h3>Room: <span id="room-name"></span></h3>
+        <button id="logout-btn" title="Déconnexion" class="danger">
+          <i class="fas fa-sign-out-alt"></i> Quitter
+        </button>
+      </header>
+      <!-- Liste des utilisateurs connectés -->
+      <div id="user-list">
+        <h4>Utilisateurs en ligne :</h4>
+        <ul id="users"></ul>
+      </div>
+      <!-- Zone du chat -->
+      <div id="messages"></div>
+      <!-- Indicateur "en train d'écrire" -->
+      <div id="typing-indicator"></div>
+      <!-- Zone d’entrée du message -->
+      <div id="msg-input-area" class="input-area">
+        <input id="messageInput" placeholder="Écrire un message..." />
+        <button id="sendBtn">Envoyer</button>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

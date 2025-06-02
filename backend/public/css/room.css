@@ -1,0 +1,126 @@
+/* https://coolors.co/d1faff-9bd1e5-6a8eae-57a773-157145 */
+
+* {
+    font-family: "Didact Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#login-container {
+    border: 4px solid #00572d;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+}
+
+#login-container h2 {
+    margin-bottom: 1rem;
+}
+
+#login-container input {
+    padding: .5rem;
+    margin-bottom: 0.8rem;
+    border: 2px solid #00572d;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    justify-self: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    justify-self: center;
+}
+
+button {
+    display: block;
+    padding: .4rem .8rem;
+    background-color: #D1FAFF;
+    cursor: pointer;
+    border : 2px solid #157145;
+    font-weight: 700;
+    box-shadow: .2rem .3rem #00572d;
+    transition: all .25s;
+}
+button:hover {
+    box-shadow: .1rem .2rem #00572d;
+}
+
+button.danger {
+    border : 2px solid #711515;
+    background-color: #ffbaa8;
+    box-shadow: .2rem .3rem #711515;
+}
+button.danger:hover {
+    box-shadow: .1rem .2rem #711515;
+}
+
+#user-list {
+    margin: 1rem 3rem;
+}
+
+.message {
+    border: 2px solid #0119f3;
+    padding: .5rem;
+    width: fit-content;
+    max-width: min(100%, 600px);
+    margin: 0.2rem 1rem;
+}
+
+
+
+.message.sent {
+    border-right-width: 1rem;
+    margin-left: auto;
+    border-top-right-radius: 0;
+    border-color: #157145;
+    background-color: #7ef1ba3d;
+}
+
+.message.received {
+    border-left-width: 1rem;
+    background-color: #92c4f05e;
+    border-top-left-radius: 0;
+}
+
+
+#msg-input-area {
+    position: relative;
+    border: 2px solid #157145;
+    background-color: #71fcb9;
+    width: 100%;
+    min-height: 3rem;
+    height: fit-content;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+#msg-input-area input {
+    display: block;
+    background-color: transparent;
+    border: none;
+    padding: 0.3rem 1rem;
+}
+
+#msg-input-area button {
+    border: none;
+    box-shadow: none;
+}
